@@ -1,0 +1,33 @@
+﻿<div>
+	@foreach (var i in Model)
+	{
+		<p>@i.Name----@i.Year</p>
+		<form method="post" action="Delete">
+			<button type="submit" name="Id" value="@i.Id">Delete</button>
+
+		</form>
+	}
+</div>
+	
+
+<div>
+	<h2>Create Human</h2>
+	<form method="post" action="Create">
+		<p>
+			<input type="text" name="Name" placeholder="Create Human name">
+			<input type="number" name="Year" placeholder="Create Human year">
+			<button type="submit">Create</button>
+		</p>
+	</form>
+
+</div>
+<div>
+	<h2>Edit Human</h2>
+	<form method="post" action="Edit">
+		<p>
+			<input type="text" name="Name" placeholder="Edit Human name">
+			<input type="number" name="Year" placeholder="Edit Human year">
+			<button type="submit">Edit</button>
+		</p>
+	</form>
+</div>
